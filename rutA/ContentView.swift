@@ -39,7 +39,7 @@ struct ContentView: View {
                         if self.matricula == storedMatricula && self.password == storedPassword {
                             self.authenticationSucceed = true
                             self.authenticationFailed = false
-                        } else {
+                        } else if self.matricula != storedMatricula || self.password != storedPassword{
                             self.authenticationFailed = true
                             self.authenticationSucceed = false
                         }
